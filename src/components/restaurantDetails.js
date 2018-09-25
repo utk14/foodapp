@@ -6,28 +6,28 @@ class RestaurantDetails extends React.Component{
     
     constructor(props){
         super(props);
-        this.state= { data:{}};
-        this.test();
+        this.state= { details:{}};
+        this.fetchDetails();
     }
     //cdf947e7e5393e2d048d924ff766f3de
 
-test() 
+fetchDetails() 
 {
     fetch("https://developers.zomato.com/api/v2.1/restaurant?res_id=" + this.props.match.params.id, {
             headers: {
                 "user-key": ""
             }
         }).then(response => response.json())
-            .then(data => {
+            .then(details => {
                 this.setState({
-                    data: data
+                    details: details
                 })
             });
 }
 
 render(){
 
-        const RestDetails = this.state.data;
+        const RestDetails = this.state.details;
     return(
             <div>
                 <div className="card">

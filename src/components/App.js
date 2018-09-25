@@ -1,9 +1,9 @@
 /*global fetch: true */
 import React from 'react';
 
-import Nav from './header';
+import Navbar from './header';
 import SearchBar from './searchbar';
-import CardCollect from './restaurants'
+import Restaurants from './restaurants'
 
 
 import 'normalize.css/normalize.css';
@@ -60,14 +60,14 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <div className="col-sm-12">
-          <Nav />
+          <Navbar />
           <br />
           <br />
         </div>
         <div className="col-sm-12">
           <SearchBar fetch={this.fetchdata} getquery={this.updateInput} />
         </div>
-        <CardCollect results={this.state.result} />
+        <Restaurants results={this.state.result} />
       </div>
     );
   }

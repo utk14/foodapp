@@ -1,15 +1,15 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
-import Card from './restaurant';
+import Restaurant from './restaurant';
 
-const Cards = (props) => {
+const restaurantCard = (props) => {
 
     return (
         <div className="container-fluid">
             <div className="flex">
                 {
                    props.results.map(function (element) {
-                    return <Card key={element.id} card={element} />
+                    return <Restaurant key={element.id} card={element} />
                     })
                 }
             </div>
@@ -17,4 +17,4 @@ const Cards = (props) => {
     );
 }
 
-export default Cards; 
+export default restaurantCard; 
