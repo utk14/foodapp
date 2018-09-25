@@ -13,7 +13,7 @@ const Nav = () => {
                 </div>
                 <div className="col-lg-2">
                     <Link className="catlink" to={`/Category_Collection`}>
-                        <button type="button" className="btn btn-primary btn-lg">View Category</button>
+                        <button type="button" className="btn btn-danger btn-lg">View Category</button>
                     </Link>
                 </div>
             </div>

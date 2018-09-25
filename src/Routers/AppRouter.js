@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from '../components/App';
 import RestaurantDetail from '../components/restaurantDetails';
-import add from '../components/AddCategory';
-import CatCollect from "../components/CategoryCollection";
+import addCategory from '../components/AddCategory';
+import CategoryCollect from "../components/CategoryCollection";
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -11,8 +11,8 @@ const AppRouter = () => (
             <Switch>
                 <Route path="/" component={App} exact={true} />
                 <Route path="/restaurant_details/:id" component={RestaurantDetail} />
-                <Route path="/Add_Category/:name" component={add} />
-                <Route path="/Category_Collection" component={CatCollect} />
+                <Route path="/Add_Category/:name" component={addCategory} />
+                <Route path="/Category_Collection" component={CategoryCollect} />
             </Switch>
         </div>
     </BrowserRouter>

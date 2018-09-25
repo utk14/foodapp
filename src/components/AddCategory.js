@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-/*global localStorage alert: true */
+/*global localStorage: true */
 
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
@@ -58,10 +58,10 @@ class AddToCategory extends React.Component {
          {
               // pushed restaurnt name in new category name 
             localStorage.setItem(categoryName, restName);            
-            alert(restName 
-                + " successfully added to " 
-                + categoryName 
-                + ". To see category details check click Show Category");
+            // alert(restName 
+            //     + " successfully added to " 
+            //     + categoryName 
+            //     + ". To see category details check click Show Category");
         }
         this.handleClose();
     }
@@ -74,9 +74,9 @@ class AddToCategory extends React.Component {
         restaurantList.push(localStorage.getItem(categoryName));
         restaurantList.push(restName);
         localStorage.setItem(categoryName, restaurantList);
-        alert(restName + " successfully added to " 
-        + categoryName 
-        + ". To see category details check click Show Category");
+        // alert(restName + " successfully added to " 
+        // + categoryName 
+        // + ". To see category details check click Show Category");
 
     }
 
